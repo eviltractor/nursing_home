@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}retired page for add{% endblock %}
+
+{% block content %}
+    <a href="{% url 'retirees' %}">come to retirees page</a>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button>Submit</button>
+    </form>
+{% endblock %}
